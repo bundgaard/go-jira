@@ -109,7 +109,6 @@ func (jira *Jira) GetIssueMetadata(input *GetIssueMetadataInput) (*GetIssueMetad
 		return nil, err
 	}
 	defer resp.Body.Close()
-
 	var output GetIssueMetadataOutput
 	if err := json.NewDecoder(resp.Body).Decode(&output); err != nil {
 		return nil, err

@@ -1,0 +1,64 @@
+{
+    "expand": "projects",
+    "projects": [
+        {
+            "self": "https://jirabundgaard.atlassian.net/rest/api/2/project/10000",
+            "id": "10000",
+            "key": "TESTP1",
+            "name": "Project 1",
+            "avatarUrls": {
+                "48x48": "https://jirabundgaard.atlassian.net/secure/projectavatar?pid=10000&avatarId=10402",
+                "24x24": "https://jirabundgaard.atlassian.net/secure/projectavatar?size=small&s=small&pid=10000&avatarId=10402",
+                "16x16": "https://jirabundgaard.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&pid=10000&avatarId=10402",
+                "32x32": "https://jirabundgaard.atlassian.net/secure/projectavatar?size=medium&s=medium&pid=10000&avatarId=10402"
+            },
+            "issuetypes": [
+                {
+                    "self": "https://jirabundgaard.atlassian.net/rest/api/2/issuetype/10002",
+                    "id": "10002",
+                    "description": "A small, distinct piece of work.",
+                    "iconUrl": "https://jirabundgaard.atlassian.net/secure/viewavatar?size=medium&avatarId=10318&avatarType=issuetype",
+                    "name": "Task",
+                    "untranslatedName": "Task",
+                    "subtask": false
+                },
+                {
+                    "self": "https://jirabundgaard.atlassian.net/rest/api/2/issuetype/10003",
+                    "id": "10003",
+                    "description": "A small piece of work that's part of a larger task.",
+                    "iconUrl": "https://jirabundgaard.atlassian.net/secure/viewavatar?size=medium&avatarId=10316&avatarType=issuetype",
+                    "name": "Sub-task",
+                    "untranslatedName": "Sub-task",
+                    "subtask": true
+                },
+                {
+                    "self": "https://jirabundgaard.atlassian.net/rest/api/2/issuetype/10001",
+                    "id": "10001",
+                    "description": "Functionality or a feature expressed as a user goal.",
+                    "iconUrl": "https://jirabundgaard.atlassian.net/secure/viewavatar?size=medium&avatarId=10315&avatarType=issuetype",
+                    "name": "Story",
+                    "untranslatedName": "Story",
+                    "subtask": false
+                },
+                {
+                    "self": "https://jirabundgaard.atlassian.net/rest/api/2/issuetype/10004",
+                    "id": "10004",
+                    "description": "A problem or error.",
+                    "iconUrl": "https://jirabundgaard.atlassian.net/secure/viewavatar?size=medium&avatarId=10303&avatarType=issuetype",
+                    "name": "Bug",
+                    "untranslatedName": "Bug",
+                    "subtask": false
+                },
+                {
+                    "self": "https://jirabundgaard.atlassian.net/rest/api/2/issuetype/10000",
+                    "id": "10000",
+                    "description": "A big user story that needs to be broken down. Created by Jira Software - do not edit or delete.",
+                    "iconUrl": "https://jirabundgaard.atlassian.net/images/icons/issuetypes/epic.svg",
+                    "name": "Epic",
+                    "untranslatedName": "Epic",
+                    "subtask": false
+                }
+            ]
+        }
+    ]
+}

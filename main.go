@@ -13,19 +13,29 @@ var (
 	Project = "go-jira"
 )
 
+type config struct {
+	url      string
+	username string
+	password string
+}
+
 func main() {
 	// https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#api-rest-api-3-issue-issueidorkey-get
 	fmt.Printf("%s %s\n", Version, Project)
-	url := os.Getenv("JIRA_URL")
-	username := os.Getenv("JIRA_USERNAME")
-	password := os.Getenv("JIRA_PASSWORD")
+	c := config{url: os.Getenv("JIRA_URL"), username: os.Getenv("JIRA_USERNAME"), password: os.Getenv("JIRA_PASSWORD")}
 
-	client := jira.NewJira(url, username, password)
+	os.Exit(0)
+	if len(c.url) < 1 {
+		fmt.Printf("error: url is not defined")
+		os.Exit(1)
+	}
+
+	client := jira.NewJira(c.url, c.username, c.password)
 
 	input := jira.GetIssueMetadataInput{}
 	output, err := client.GetIssueMetadata(&input)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("metadata", err)
 	}
 	fmt.Println(output)
 
